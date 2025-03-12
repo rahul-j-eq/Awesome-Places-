@@ -294,6 +294,7 @@
                     <connections>
                         <outlet property="tableView" destination="BaY-Wf-LXm" id="sWS-hx-7Wg"/>
                         <segue destination="Qnw-Dz-4be" kind="show" identifier="goesToDestination" id="gti-J7-pdy"/>
+                        <segue destination="xpm-BP-0ep" kind="show" identifier="goesToTour" id="XlE-Xt-qkH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p8J-mc-7DL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -454,30 +455,255 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AS5-Fd-y1g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2609.9236641221373" y="-128.16901408450704"/>
+            <point key="canvasLocation" x="2610" y="-358"/>
+        </scene>
+        <!--Destinations-->
+        <scene sceneID="INI-rr-1Jl">
+            <objects>
+                <viewController id="xpm-BP-0ep" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g20-rR-gNO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aLU-yd-PLg">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="226" id="imc-8B-Uqa">
+                                        <rect key="frame" x="0.0" y="38" width="393" height="226"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="imc-8B-Uqa" id="Jly-FG-KYF">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="226"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYl-Yj-Qib">
+                                                    <rect key="frame" x="30" y="10" width="341" height="206"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ux5-rc-Yh3">
+                                                            <rect key="frame" x="10" y="10" width="321" height="186"/>
+                                                            <string key="text">Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.</string>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="0.0"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="0.0"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="Ux5-rc-Yh3" secondAttribute="trailing" constant="10" id="XOj-mM-uDD"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Ux5-rc-Yh3" secondAttribute="bottom" constant="10" id="lPL-UV-cik"/>
+                                                        <constraint firstItem="Ux5-rc-Yh3" firstAttribute="leading" secondItem="ZYl-Yj-Qib" secondAttribute="leading" constant="10" id="qdW-YQ-EEe"/>
+                                                        <constraint firstItem="Ux5-rc-Yh3" firstAttribute="top" secondItem="ZYl-Yj-Qib" secondAttribute="top" constant="10" id="zd6-Sd-6ym"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ZYl-Yj-Qib" secondAttribute="bottom" constant="10" id="Pbi-9L-nMP"/>
+                                                <constraint firstItem="ZYl-Yj-Qib" firstAttribute="top" secondItem="Jly-FG-KYF" secondAttribute="top" constant="10" id="nZl-jX-RDU"/>
+                                                <constraint firstItem="ZYl-Yj-Qib" firstAttribute="leading" secondItem="Jly-FG-KYF" secondAttribute="leading" constant="30" id="uhm-mL-EYj"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZYl-Yj-Qib" secondAttribute="trailingMargin" constant="30" id="ySC-y4-KGP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" rowHeight="246" id="FwP-Lq-cEo">
+                                        <rect key="frame" x="0.0" y="264" width="393" height="246"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FwP-Lq-cEo" id="BWb-ZU-1Aq">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="246"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbS-qK-bVc">
+                                                    <rect key="frame" x="30" y="104.66666666666669" width="333" height="120.33333333333331"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="rdm-1F-02s">
+                                                            <rect key="frame" x="0.0" y="0.0" width="333" height="120.33333333333333"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fpP-Xo-wjC">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="101" height="120.33333333333333"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7c-5r-RHj">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="101" height="100"/>
+                                                                            <color key="backgroundColor" red="0.19607843137254902" green="0.80000000000000004" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="100" id="ilW-vr-Aak"/>
+                                                                            </constraints>
+                                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                            <state key="normal">
+                                                                                <imageReference key="image" image="car" catalog="system" renderingMode="hierarchical-single">
+                                                                                    <hierarchicalColors>
+                                                                                        <color systemColor="systemPinkColor"/>
+                                                                                        <color systemColor="secondaryLabelColor"/>
+                                                                                        <color systemColor="tertiaryLabelColor"/>
+                                                                                    </hierarchicalColors>
+                                                                                </imageReference>
+                                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                                            </state>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="10"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </button>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="car" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCH-Ll-DPy">
+                                                                            <rect key="frame" x="0.0" y="99.999999999999986" width="101" height="20.333333333333329"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ORc-v3-Ufe">
+                                                                    <rect key="frame" x="116" y="0.0" width="101" height="120.33333333333333"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vg8-Qe-646">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="101" height="100"/>
+                                                                            <color key="backgroundColor" red="0.1960784314" green="0.80000000000000004" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                            <state key="normal">
+                                                                                <imageReference key="image" image="car" catalog="system" renderingMode="hierarchical-single">
+                                                                                    <hierarchicalColors>
+                                                                                        <color systemColor="systemPinkColor"/>
+                                                                                        <color systemColor="secondaryLabelColor"/>
+                                                                                        <color systemColor="tertiaryLabelColor"/>
+                                                                                    </hierarchicalColors>
+                                                                                </imageReference>
+                                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                                            </state>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="10"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </button>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="car" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qwl-ey-Cgn">
+                                                                            <rect key="frame" x="0.0" y="99.999999999999986" width="101" height="20.333333333333329"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="usp-cJ-N8x">
+                                                                    <rect key="frame" x="232" y="0.0" width="101" height="120.33333333333333"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNO-Rg-yAv">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="101" height="100"/>
+                                                                            <color key="backgroundColor" red="0.1960784314" green="0.80000000000000004" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                            <state key="normal">
+                                                                                <imageReference key="image" image="car" catalog="system" renderingMode="hierarchical-single">
+                                                                                    <hierarchicalColors>
+                                                                                        <color systemColor="systemPinkColor"/>
+                                                                                        <color systemColor="secondaryLabelColor"/>
+                                                                                        <color systemColor="tertiaryLabelColor"/>
+                                                                                    </hierarchicalColors>
+                                                                                </imageReference>
+                                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                                            </state>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="10"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </button>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="car" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zH5-f4-mIA">
+                                                                            <rect key="frame" x="0.0" y="99.999999999999986" width="101" height="20.333333333333329"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <constraints>
+                                                        <constraint firstItem="rdm-1F-02s" firstAttribute="leading" secondItem="wbS-qK-bVc" secondAttribute="leading" id="7dC-Yi-PUX"/>
+                                                        <constraint firstItem="rdm-1F-02s" firstAttribute="top" secondItem="wbS-qK-bVc" secondAttribute="top" id="8Nz-Es-7dA"/>
+                                                        <constraint firstAttribute="trailing" secondItem="rdm-1F-02s" secondAttribute="trailing" id="cWz-G5-E9K"/>
+                                                        <constraint firstAttribute="bottom" secondItem="rdm-1F-02s" secondAttribute="bottom" id="ssn-zi-zuJ"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Select a vehical" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysW-YV-2V8">
+                                                    <rect key="frame" x="30" y="21" width="333" height="77.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <color key="textColor" red="0.61960784310000006" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wbS-qK-bVc" secondAttribute="bottom" constant="10" id="081-5U-94G"/>
+                                                <constraint firstItem="ysW-YV-2V8" firstAttribute="top" secondItem="BWb-ZU-1Aq" secondAttribute="topMargin" constant="10" id="C4P-71-WVb"/>
+                                                <constraint firstItem="ysW-YV-2V8" firstAttribute="leading" secondItem="BWb-ZU-1Aq" secondAttribute="leadingMargin" constant="10" id="YUZ-m3-KPH"/>
+                                                <constraint firstItem="wbS-qK-bVc" firstAttribute="trailing" secondItem="ysW-YV-2V8" secondAttribute="trailing" id="jtm-d6-6Sv"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ysW-YV-2V8" secondAttribute="trailing" constant="10" id="nJC-hg-nCg"/>
+                                                <constraint firstItem="wbS-qK-bVc" firstAttribute="leading" secondItem="ysW-YV-2V8" secondAttribute="leading" id="v96-0x-qFW"/>
+                                                <constraint firstItem="wbS-qK-bVc" firstAttribute="top" secondItem="ysW-YV-2V8" secondAttribute="bottom" constant="6" id="z4z-qg-gCJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JK4-wH-brY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aLU-yd-PLg" firstAttribute="leading" secondItem="JK4-wH-brY" secondAttribute="leading" id="1Dv-81-7yv"/>
+                            <constraint firstAttribute="bottom" secondItem="aLU-yd-PLg" secondAttribute="bottom" id="Cg6-DN-8iy"/>
+                            <constraint firstItem="aLU-yd-PLg" firstAttribute="trailing" secondItem="JK4-wH-brY" secondAttribute="trailing" id="Vzt-1p-Rby"/>
+                            <constraint firstItem="aLU-yd-PLg" firstAttribute="top" secondItem="g20-rR-gNO" secondAttribute="top" id="ePU-aV-fO4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Destinations" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" style="editor" id="OOq-rl-sfF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMJ-Xs-buW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2609.9236641221373" y="414.78873239436621"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="arrow.up.left" catalog="system" width="128" height="112"/>
+        <image name="car" catalog="system" width="128" height="95"/>
         <image name="nature" width="343" height="214"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
