@@ -462,11 +462,11 @@
             <objects>
                 <viewController id="xpm-BP-0ep" customClass="TourViewController" customModule="Awesome_Places" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g20-rR-gNO">
-                        <rect key="frame" x="0.0" y="0.0" width="392" height="1500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="392" height="1650"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aLU-yd-PLg">
-                                <rect key="frame" x="0.0" y="0.0" width="392" height="1500"/>
+                                <rect key="frame" x="0.0" y="0.0" width="392" height="1650"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="226" id="imc-8B-Uqa">
@@ -517,7 +517,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" rowHeight="246" id="FwP-Lq-cEo">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TourVehicleCell" rowHeight="246" id="FwP-Lq-cEo" customClass="TourVehicleCell" customModule="Awesome_Places" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="264" width="392" height="246"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FwP-Lq-cEo" id="BWb-ZU-1Aq">
@@ -555,6 +555,9 @@
                                                                                     <real key="value" value="10"/>
                                                                                 </userDefinedRuntimeAttribute>
                                                                             </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <action selector="vehicleButtonTapped:" destination="FwP-Lq-cEo" eventType="touchUpInside" id="1MS-3U-biI"/>
+                                                                            </connections>
                                                                         </button>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCH-Ll-DPy">
                                                                             <rect key="frame" x="0.0" y="99.999999999999986" width="100.66666666666667" height="20.333333333333329"/>
@@ -589,6 +592,9 @@
                                                                                     <real key="value" value="10"/>
                                                                                 </userDefinedRuntimeAttribute>
                                                                             </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <action selector="vehicleButtonTapped:" destination="FwP-Lq-cEo" eventType="touchUpInside" id="B1M-GC-KOb"/>
+                                                                            </connections>
                                                                         </button>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bike" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUR-O4-f3V">
                                                                             <rect key="frame" x="0.0" y="99.999999999999986" width="100.66666666666667" height="20.333333333333329"/>
@@ -623,6 +629,9 @@
                                                                                     <real key="value" value="10"/>
                                                                                 </userDefinedRuntimeAttribute>
                                                                             </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <action selector="vehicleButtonTapped:" destination="FwP-Lq-cEo" eventType="touchUpInside" id="2gG-1f-FjB"/>
+                                                                            </connections>
                                                                         </button>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZH-iB-PgQ">
                                                                             <rect key="frame" x="0.0" y="99.999999999999986" width="100.66666666666667" height="20.333333333333329"/>
@@ -635,7 +644,6 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                     <constraints>
                                                         <constraint firstItem="rdm-1F-02s" firstAttribute="leading" secondItem="wbS-qK-bVc" secondAttribute="leading" id="7dC-Yi-PUX"/>
                                                         <constraint firstItem="rdm-1F-02s" firstAttribute="top" secondItem="wbS-qK-bVc" secondAttribute="top" id="8Nz-Es-7dA"/>
@@ -665,8 +673,13 @@
                                                 <constraint firstItem="wbS-qK-bVc" firstAttribute="top" secondItem="ysW-YV-2V8" secondAttribute="bottom" constant="6" id="z4z-qg-gCJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bike2" destination="2ic-3o-uns" id="JQl-S4-Sk2"/>
+                                            <outlet property="bus3" destination="KLe-0U-N6W" id="SX8-yq-g2Q"/>
+                                            <outlet property="car1" destination="l7c-5r-RHj" id="GRH-iK-atS"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" rowHeight="315" id="7re-yp-EAR">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TourRatingCell" rowHeight="315" id="7re-yp-EAR" customClass="TourRatingCell" customModule="Awesome_Places" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="510" width="392" height="315"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7re-yp-EAR" id="wgo-lK-zi9">
@@ -726,7 +739,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <stackView opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iyD-Z0-brH">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iyD-Z0-brH">
                                                     <rect key="frame" x="80" y="234" width="232" height="40"/>
                                                     <subviews>
                                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3A-Rx-uYw">
@@ -750,6 +763,9 @@
                                                                     </hierarchicalColors>
                                                                 </imageReference>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="rateButtonTapped:" destination="7re-yp-EAR" eventType="touchUpInside" id="kOY-VZ-iVg"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXL-ej-Hxf">
                                                             <rect key="frame" x="48.333333333333343" y="0.0" width="38.333333333333343" height="40"/>
@@ -772,6 +788,9 @@
                                                                     </hierarchicalColors>
                                                                 </imageReference>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="rateButtonTapped:" destination="7re-yp-EAR" eventType="touchUpInside" id="ABI-7j-Mjn"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdw-Bq-Grk">
                                                             <rect key="frame" x="96.666666666666657" y="0.0" width="38.666666666666657" height="40"/>
@@ -794,6 +813,9 @@
                                                                     </hierarchicalColors>
                                                                 </imageReference>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="rateButtonTapped:" destination="7re-yp-EAR" eventType="touchUpInside" id="cDp-t1-wJt"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8G-3D-xZ1">
                                                             <rect key="frame" x="145.33333333333334" y="0.0" width="38.333333333333343" height="40"/>
@@ -816,6 +838,9 @@
                                                                     </hierarchicalColors>
                                                                 </imageReference>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="rateButtonTapped:" destination="7re-yp-EAR" eventType="touchUpInside" id="E7N-SU-0ld"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWh-CZ-4hT">
                                                             <rect key="frame" x="193.66666666666669" y="0.0" width="38.333333333333343" height="40"/>
@@ -838,9 +863,12 @@
                                                                     </hierarchicalColors>
                                                                 </imageReference>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="rateButtonTapped:" destination="7re-yp-EAR" eventType="touchUpInside" id="awM-Sv-vho"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="njQ-DU-NIF"/>
                                                     </constraints>
@@ -876,8 +904,15 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="JwF-Ct-SDa" secondAttribute="trailing" constant="10" id="o5T-W6-qqc"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="rateBtn1" destination="H3A-Rx-uYw" id="UKw-Od-ehK"/>
+                                            <outlet property="rateBtn2" destination="mXL-ej-Hxf" id="DyI-bd-JX8"/>
+                                            <outlet property="rateBtn3" destination="Tdw-Bq-Grk" id="ZJ1-5h-HYc"/>
+                                            <outlet property="rateBtn4" destination="V8G-3D-xZ1" id="823-hY-WxX"/>
+                                            <outlet property="rateBtn5" destination="WWh-CZ-4hT" id="cjL-Iz-QmL"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell3" rowHeight="420" id="yqR-IE-ktB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TourDetailsCell" rowHeight="420" id="yqR-IE-ktB" customClass="TourDetailsCell" customModule="Awesome_Places" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="825" width="392" height="420"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yqR-IE-ktB" id="XHk-7L-iFX">
@@ -902,7 +937,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="gQL-Fl-IrS"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="namePhonePad" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="10"/>
@@ -924,7 +959,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="India..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wjt-GQ-M7I">
                                                     <rect key="frame" x="30" y="210.66666666666666" width="332" height="49.999999999999972"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="namePhonePad" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="10"/>
@@ -971,6 +1006,9 @@
                                                                     <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="addBtnPressed:" destination="yqR-IE-ktB" eventType="touchUpInside" id="nrp-lx-R5T"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWJ-S8-WUs">
                                                             <rect key="frame" x="123.66666666666666" y="0.0" width="108.33333333333334" height="45.666666666666664"/>
@@ -991,6 +1029,9 @@
                                                                     <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="removeBtnPressed:" destination="yqR-IE-ktB" eventType="touchUpInside" id="Ymf-in-oZl"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -1052,6 +1093,11 @@
                                                 <constraint firstItem="Qy7-ky-clq" firstAttribute="top" secondItem="jko-mz-E4w" secondAttribute="bottom" constant="10" id="yil-8k-Ru2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="countryTextField" destination="Wjt-GQ-M7I" id="RPi-6w-EGN"/>
+                                            <outlet property="nameTextField" destination="UGF-3A-aA1" id="IIE-TD-jK3"/>
+                                            <outlet property="teamSizeLbl" destination="AgT-pr-4tP" id="VOd-zK-AEX"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell4" rowHeight="226" id="ZtC-y4-BOr">
                                         <rect key="frame" x="0.0" y="1245" width="392" height="226"/>
@@ -1140,14 +1186,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Lets Book A Tour!" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" style="editor" id="OOq-rl-sfF"/>
-                    <size key="freeformSize" width="392" height="1500"/>
+                    <size key="freeformSize" width="392" height="1650"/>
                     <connections>
                         <outlet property="tableView" destination="aLU-yd-PLg" id="iS7-b3-y6q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMJ-Xs-buW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2607.6335877862593" y="569.71830985915494"/>
+            <point key="canvasLocation" x="2609" y="680"/>
         </scene>
     </scenes>
     <resources>

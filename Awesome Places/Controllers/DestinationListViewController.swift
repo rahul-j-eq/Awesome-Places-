@@ -26,6 +26,10 @@ class DestinationListViewController: UIViewController {
         super.viewDidLoad()
         setupNavBar()
         setupTableView()
+        setupKeyboardHandling()
+    }
+    deinit {
+        removeKeyboardHandling()
     }
     
     private func setupTableView() {
@@ -65,7 +69,9 @@ extension DestinationListViewController: UITableViewDataSource, UITableViewDeleg
             
         case destinations.count + 1: // Show RateTableViewCell at the end if Cultural
             if selectedCategory?.title == "Cultural" {
-                return tableView.dequeueReusableCell(withIdentifier: "RateTableViewCell", for: indexPath) as! RateTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: "RateTableViewCell", for: indexPath) as! RateTableViewCell
+                cell.delegate = self
+                return cell
             }
             
         default:
@@ -78,5 +84,18 @@ extension DestinationListViewController: UITableViewDataSource, UITableViewDeleg
         }
         
         return UITableViewCell() // Default return (should not be reached)
+    }
+}
+ 
+extension DestinationListViewController: DestinationRatingTVCDelegate {
+    func didShowErrorAlert(title: String, message: String) {
+        AlertManager.shared.showAlert(on: self, title: title, message: message)
+    }
+    
+    func didSubmitFeedbackSuccessfully(rating: Int, feedback: String?) {
+        let feedbackMessage = feedback?.isEmpty == false ? "Feedback: \(feedback!)" : "No feedback provided."
+        let successMessage = "Thank you for your rating of \(rating) stars!\n\(feedbackMessage)"
+        
+        AlertManager.shared.showAlert(on: self, title: "Submission Successful", message: successMessage)
     }
 }

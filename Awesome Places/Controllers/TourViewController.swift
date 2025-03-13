@@ -20,6 +20,10 @@ class TourViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         tableView.reloadData()
+        setupKeyboardHandling()
+    }
+    deinit {
+        removeKeyboardHandling()
     }
     
     override func viewDidLoad() {
@@ -58,15 +62,16 @@ extension TourViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
             
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TourVehicleCell", for: indexPath) as! TourVehicleCell
             return cell
             
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TourRatingCell", for: indexPath) as! TourRatingCell
+            cell.delegate = self
             return cell
             
         case 3:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TourDetailsCell", for: indexPath) as! TourDetailsCell
             return cell
             
         case 4:
@@ -74,6 +79,19 @@ extension TourViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
             
         default:return UITableViewCell()
+        }
+    }
+}
+
+extension TourViewController: TourRatingTVCDelegate {
+    func didShowErrorAlert(title: String, message: String) {
+        AlertManager.shared.showAlert(on: self, title: title, message: message)
+    }
+    
+    func didSubmitRating(rating: Int) {
+        print("Selected Rating := \(rating)")
+        if rating == 5{
+            AlertManager.shared.showAlert(on: self, title: "Submission Successful", message: "Thank you for 5 Star Rating!")
         }
     }
 }
