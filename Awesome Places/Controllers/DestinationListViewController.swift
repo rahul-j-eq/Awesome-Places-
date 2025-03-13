@@ -72,10 +72,8 @@ extension DestinationListViewController: UITableViewDataSource, UITableViewDeleg
             let cell = tableView.dequeueReusableCell(withIdentifier: "DetailsTableCell", for: indexPath) as! DetailsTableCell
             
             let destination = destinations[indexPath.row - 1] // Adjust index for top cell
-            cell.destinationNameLbl.text = destination.name
-            cell.destinationNameLbl.textColor = selectedCategory?.color
-            cell.descriptionLbl.text = destination.description
-            cell.destinationImage.loadImage(from: destination.imageURL)
+            let name = destination.name , color = selectedCategory?.color , description = destination.description , imageURL = destination.imageURL
+            cell.configure(name: name, color: color, description: description, Image: imageURL)
             return cell
         }
         

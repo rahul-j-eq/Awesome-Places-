@@ -51,6 +51,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MainFooterCell") as! MainFooterCell
+            cell.delegate = self
             return cell
         default:
             return UITableViewCell()
@@ -59,8 +60,16 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension HomeViewController: MainCategoryCellDelegate {
+    func didSelectTourBtn() {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "goesToTour", sender: nil)
+        }
+    }
+    
     func didSelectCategory(_ category: Category) {
-        performSegue(withIdentifier: "goesToDestination", sender: category)
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "goesToDestination", sender: category)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

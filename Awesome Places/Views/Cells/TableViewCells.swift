@@ -10,6 +10,7 @@ import UIKit
 
 protocol MainCategoryCellDelegate: AnyObject {
     func didSelectCategory(_ category: Category)
+    func didSelectTourBtn()
 }
 
 // Helper function for setting up the UICollectionView
@@ -69,8 +70,6 @@ class MainCategoryCell: UITableViewCell {
 }
 
 
-
-// MARK: - UICollectionViewDataSource & Delegate
 extension MainCategoryCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -98,6 +97,7 @@ extension MainCategoryCell: UICollectionViewDelegate, UICollectionViewDataSource
 class MainFooterCell: UITableViewCell {
     
     @IBOutlet weak var btnBookARide: UIButton!
+    weak var delegate: MainCategoryCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -105,6 +105,7 @@ class MainFooterCell: UITableViewCell {
     
     @IBAction func btnBookARidePressed(_ sender: UIButton) {
         print(#function)
+        delegate?.didSelectTourBtn()
     }
 }
 
@@ -118,5 +119,14 @@ class DetailsTableCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    func configure(name: String , color: UIColor? , description: String , Image: String) {
+        self.destinationNameLbl.text = name
+        self.destinationNameLbl.textColor = color
+        self.descriptionLbl.text = description
+        DispatchQueue.main.async {  
+            self.destinationImage.loadImage(from: Image)
+        }
     }
 }
