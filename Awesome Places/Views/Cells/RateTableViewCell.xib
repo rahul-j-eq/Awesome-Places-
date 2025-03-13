@@ -40,7 +40,7 @@
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nDI-RD-qH7">
                         <rect key="frame" x="40" y="77.666666666666671" width="273" height="45"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9c-C0-OCI">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9c-C0-OCI">
                                 <rect key="frame" x="0.0" y="0.0" width="46.666666666666664" height="45"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
@@ -61,8 +61,11 @@
                                         </hierarchicalColors>
                                     </imageReference>
                                 </state>
+                                <connections>
+                                    <action selector="rateButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="c4t-XJ-DIm"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqn-fc-TXb">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqn-fc-TXb">
                                 <rect key="frame" x="56.666666666666671" y="0.0" width="46.666666666666671" height="45"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
@@ -83,8 +86,11 @@
                                         </hierarchicalColors>
                                     </imageReference>
                                 </state>
+                                <connections>
+                                    <action selector="rateButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pJd-Tg-7v7"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JkT-cx-tPC">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JkT-cx-tPC">
                                 <rect key="frame" x="113.33333333333333" y="0.0" width="46.333333333333329" height="45"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
@@ -105,8 +111,11 @@
                                         </hierarchicalColors>
                                     </imageReference>
                                 </state>
+                                <connections>
+                                    <action selector="rateButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gqb-Ip-UTU"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhY-eY-swg">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhY-eY-swg">
                                 <rect key="frame" x="169.66666666666666" y="0.0" width="46.666666666666657" height="45"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
@@ -127,8 +136,11 @@
                                         </hierarchicalColors>
                                     </imageReference>
                                 </state>
+                                <connections>
+                                    <action selector="rateButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="azg-gV-QHP"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4Z-Vl-QGW">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4Z-Vl-QGW">
                                 <rect key="frame" x="226.33333333333331" y="0.0" width="46.666666666666686" height="45"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
@@ -149,6 +161,9 @@
                                         </hierarchicalColors>
                                     </imageReference>
                                 </state>
+                                <connections>
+                                    <action selector="rateButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aAG-uA-Od9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -167,7 +182,7 @@
                             <constraint firstAttribute="height" constant="50" id="jo8-Ru-9A3"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="namePhonePad" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="10"/>
@@ -203,6 +218,9 @@
                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="submitBtnPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8bh-yM-CWv"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -227,7 +245,15 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="458.77862595419845" y="43.661971830985919"/>
+            <connections>
+                <outlet property="feedbackTextField" destination="aLP-wX-Eih" id="7Bf-Vm-YWs"/>
+                <outlet property="rateBtn1" destination="D9c-C0-OCI" id="8N8-Vw-CO8"/>
+                <outlet property="rateBtn2" destination="kqn-fc-TXb" id="UoQ-Gd-qEq"/>
+                <outlet property="rateBtn3" destination="JkT-cx-tPC" id="UUS-xL-ZPB"/>
+                <outlet property="rateBtn4" destination="DhY-eY-swg" id="cnG-7K-axZ"/>
+                <outlet property="rateBtn5" destination="u4Z-Vl-QGW" id="lEa-4m-66M"/>
+            </connections>
+            <point key="canvasLocation" x="500" y="28"/>
         </tableViewCell>
     </objects>
     <resources>
